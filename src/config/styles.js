@@ -1,1 +1,0 @@
-export const BOX_SIZE = 50; /* in pixels */
