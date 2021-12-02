@@ -3,10 +3,6 @@ import { findDOMNode } from 'react-dom';
 import classNames from 'classnames';
 import { cloneDeep } from 'lodash';
 
-function Index(props) {
-    return <div className="circle"> {props.index} </div>
-}
-
 class Sub extends Component {
 
     constructor(props) {
@@ -531,7 +527,6 @@ class Sub extends Component {
 
     renderSum(s, i, border, anchor) {
         return <div key={i} className={classNames('sum1', border)} id={'sum' + ++this.svgs} >
-            <Index index={anchor} />
             <svg ref={'sum' + this.svgs} style={{ paddingLeft: '20px' }}>
                 {this.Y = this.Y_START} {this.X = this.X_START} {this.inputs = []}
                 {
