@@ -1,6 +1,7 @@
 # School
 Step wise solution to arithmetic problmes. Supported actions:
 - Addition
+- Subtraction
 
 Deployed at: https://shubhamdp.github.io/school/
 
@@ -10,9 +11,15 @@ Deployed at: https://shubhamdp.github.io/school/
 ```
 npm install
 ```
+
 - Start the project
 ```
 npm start
 ```
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## To deploy
+```
+npm run deploy
+```

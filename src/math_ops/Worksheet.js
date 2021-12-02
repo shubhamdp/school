@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Add from './Add'
+import Sub from './Sub'
 
 function Index(props) {
     return <div className="circle"> {props.index} </div>
@@ -74,6 +75,15 @@ class Worksheet extends Component {
                     </div>
                 );
             }
+        } else if (operation === 'Subtraction') {
+            for (let i = 0; i < count; i++) {
+                result.push(
+                    <div key={i} style={{ borderStyle: 'solid', borderColor: 'gray', margin: '10px 40px 10px 10px', position: 'relative' }}>
+                        { <Index index={i + 1} /> }
+                        <Sub key={i} check={this.stepFlag} new={this.new} />
+                    </div>
+                );
+            }
         }
 
         return result;
@@ -95,6 +105,7 @@ class Worksheet extends Component {
                 <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                     <select onChange={this.change} defaultValue={this.selectedOperation}>
                         <option value="Addition">Addition</option>
+                        <option value="Subtraction">Subtraction</option>
                     </select>
                     <button onClick={this.showStepsCallback}> Steps </button>
             { /* <button onClick={this.showAnswerCallback}> Answers </button> */ }
