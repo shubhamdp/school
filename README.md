@@ -2,6 +2,7 @@
 Step wise solution to arithmetic problmes. Supported actions:
 - Addition
 - Subtraction
+- Multiplication
 
 Deployed at: https://shubhamdp.github.io/school/
 

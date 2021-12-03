@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import Add from './Add'
-import Sub from './Sub'
+
+import Add  from './Add'
+import Sub  from './Sub'
+import Mult from './Mult'
 
 function Index(props) {
     return <div className="circle"> {props.index} </div>
@@ -84,6 +86,12 @@ class Worksheet extends Component {
                     </div>
                 );
             }
+        } else if (operation === 'Multiplication') {
+            for (let i = 0; i < 10; i++) {
+                result.push(<div key={i} style={{ borderStyle: 'solid', borderColor: 'gray', margin: '10px 40px 10px 10px', position: 'relative' }} >
+                    {<Index index={i + 1} />}
+                    <Mult key={i} check={this.stepFlag} new={this.new} /> </div>);
+            }
         }
 
         return result;
@@ -106,6 +114,7 @@ class Worksheet extends Component {
                     <select onChange={this.change} defaultValue={this.selectedOperation}>
                         <option value="Addition">Addition</option>
                         <option value="Subtraction">Subtraction</option>
+                        <option value="Multiplication">Multiplication</option>
                     </select>
                     <button onClick={this.showStepsCallback}> Steps </button>
             { /* <button onClick={this.showAnswerCallback}> Answers </button> */ }
