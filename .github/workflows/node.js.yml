@@ -27,4 +27,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install
-    - run: npm run deploy
+    - run: npm run build
+    - name: create a deployment
+      uses: npm/action-deploy@v2
+      id: create-deployment
+      with:
+        type: create
+        token: ${{github.token}}
+    
