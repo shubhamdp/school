@@ -1,3 +1,5 @@
+> NOTE: THIS REPO HAS BEEN ARCHIVED!
+
 # School
 Step wise solution to arithmetic problmes. Supported actions:
 - Addition
